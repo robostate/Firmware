@@ -397,7 +397,7 @@ protected:
 
 			struct mavlink_log_s mavlink_log = {};
 
-			if (_mavlink->get_logbuffer()->get(&mavlink_log)) {
+			if (_mavlink->get_logbuffer()->get(&mavlink_log) && _mavlink->is_connected()) {
 
 				mavlink_statustext_t msg;
 				msg.severity = mavlink_log.severity;
