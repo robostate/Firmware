@@ -16,6 +16,9 @@
 
 class CameraInterfacePWM : public CameraInterface
 {
+private:
+	int32_t pwm_camera_shoot_ = 0;
+	int32_t pwm_camera_neutral_ = 0;
 public:
 	CameraInterfacePWM();
 	virtual ~CameraInterfacePWM();
